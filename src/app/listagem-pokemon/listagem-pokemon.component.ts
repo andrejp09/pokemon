@@ -1,7 +1,6 @@
 import {Component, OnInit}from '@angular/core'; 
 import {ListagemPokemonService}from '../services/listagem-pokemon.service'; 
 import {ResponsePokemon}from '../models/response-pokemon'; 
-import {Pokemon }from '../models/pokemon'; 
 import _ from 'lodash'; 
 
 @Component( {

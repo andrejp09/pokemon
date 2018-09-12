@@ -51,30 +51,28 @@ export class ListagemPokemonComponent implements OnInit {
     }
 
     carregarInformacoesPokemon(pokemon, value){
-        let imagens;
-                    pokemon.id = _.get(value, 'id'); 
-                    pokemon.name = _.get(value, 'name'); 
-                    pokemon.url = _.get(value, 'url'); 
-                    pokemon.urlFoto = _.get(value, 'sprites.front_default'); 
-                    pokemon.imagens = [];
-                    pokemon.imagens.push({ url: pokemon.urlFoto});
-                    imagens =  _.chain(value.sprites)
-                        .map((data) => 
-                            { 
-                                return { url: data}
-                            })
-                        .filter((value) => value.url !== null)
-                        .value()
-                    pokemon.imagens.push(imagens);
-                    pokemon.experiencia = _.get(value, 'base_experience'); 
-                    pokemon.caracteristica = _.map(_.get(value, 'stats'), 
-                    function (data) {
-                        return {
-                            name:data.stat.name.replace('-', ' '), 
-                            valor:data.base_stat
-                        }
-                    }); 
-                    return pokemon;
+        pokemon.id = _.get(value, 'id'); 
+        pokemon.name = _.get(value, 'name'); 
+        pokemon.url = _.get(value, 'url'); 
+        pokemon.urlFoto = _.get(value, 'sprites.front_default'); 
+        pokemon.imagens = [];
+        pokemon.imagens =  _.chain(value.sprites)
+            .map((data) => 
+                { 
+                    return { url: data}
+                })
+            .filter((value) => value.url !== null)
+            .value()
+        pokemon.experiencia = _.get(value, 'base_experience'); 
+        pokemon.caracteristica = _.map(_.get(value, 'stats'), 
+            (data) => {
+                return {
+                    name:data.stat.name.replace('-', ' '), 
+                    valor:data.base_stat
+                }
+            }
+        ); 
+        return pokemon;
     } 
 
 }

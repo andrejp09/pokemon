@@ -7,8 +7,8 @@
         </mat-card-header>
         <br>
         <mat-card-content class="d-flex justify-content-center">
-          <img mat-card-md-image src="{{pokemon.urlFoto}}" alt="{{pokemon.name}}">
-
+          <img mat-card-md-image *ngIf="pokemon.urlFoto" src="{{pokemon.urlFoto}}" alt="{{pokemon.name}}">
+          <mat-progress-spinner *ngIf="!pokemon.urlFoto" mode="indeterminate"></mat-progress-spinner>
         </mat-card-content>
       </mat-card>
     </div>

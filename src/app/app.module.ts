@@ -7,6 +7,7 @@ import {ListagemPokemonService} from './services/listagem-pokemon.service';
 import {NgbPaginationModule} from '@ng-bootstrap/ng-bootstrap';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 
 @NgModule({
     declarations: [
@@ -17,6 +18,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
         NgbPaginationModule,
         MatCardModule,
         MatToolbarModule,
+        MatProgressSpinnerModule,
         BrowserAnimationsModule,
         BrowserModule
     ],

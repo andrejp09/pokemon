@@ -1,4 +1,7 @@
-# DesafioPokemon
+## Para rodar o projeto apenas baixe o projeto e rode o npm install
+# Caso queira veer online basta acessar a url: http://desafio-pokemon.herokuapp.com
+
+# Desafio pokemon
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.5.
 

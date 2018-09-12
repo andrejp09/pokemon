@@ -1,0 +1,25 @@
+<div class="container" >
+  <div class="row">
+    <div class="col-sm-4" *ngFor="let pokemon of listaPokemom.results; let i = index">
+      <mat-card class="card-pokemon" flex-sm="25" flex-gt-sm="30" flex="100">
+        <mat-card-header>
+          <mat-card-title>{{pokemon.name | titlecase}}</mat-card-title>
+        </mat-card-header>
+        <br>
+        <mat-card-content class="d-flex justify-content-center">
+          <img mat-card-md-image src="{{pokemon.urlFoto}}" alt="{{pokemon.name}}">
+
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+
+  <ngb-pagination
+    class="d-flex justify-content-center"
+    (pageChange)="changePage($event)" [collectionSize]="listaPokemom.count-10" [(page)]="page"
+    [maxSize]="5" [rotate]="true" [ellipses]="false" [boundaryLinks]="true">
+  </ngb-pagination>
+
+</div>
+
+

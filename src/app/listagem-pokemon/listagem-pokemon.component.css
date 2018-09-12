@@ -1,0 +1,17 @@
+.listagem-card {
+  max-width: 500px;
+}
+
+.card-pokemon{
+  position: relative;
+  max-width: 100%;
+  margin: 6px;
+  background-color: lightgray;
+  align-self: flex-end;
+}
+
+.row {
+  margin-top: 8%;
+}
+
+

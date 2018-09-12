@@ -1,18 +1,40 @@
 <div class="container" >
   <div class="row">
-    <div class="col-sm-4" *ngFor="let pokemon of listaPokemom.results; let i = index">
+    <div class="col-sm-4"  *ngFor="let pokemon of listaPokemom.results; let i = index">
       <mat-card class="card-pokemon" flex-sm="25" flex-gt-sm="30" flex="100">
-        <mat-card-header>
-          <mat-card-title>{{pokemon.name | titlecase}}</mat-card-title>
+        <mat-card-header  class="d-flex justify-content-center">
+          <mat-card-title class="format-title">{{pokemon.name | titlecase}}</mat-card-title>
         </mat-card-header>
+        <mat-divider></mat-divider>
         <br>
-        <mat-card-content class="d-flex justify-content-center">
-          <img mat-card-md-image *ngIf="pokemon.urlFoto" src="{{pokemon.urlFoto}}" alt="{{pokemon.name}}">
-          <mat-progress-spinner *ngIf="!pokemon.urlFoto" mode="indeterminate"></mat-progress-spinner>
+        <mat-card-content class="d-flex">
+          <div class="col-sm-8">
+              <h6 class="format-font" *ngFor="let item of pokemon.caracteristica">
+                  {{item.name | titlecase}}: {{item.valor}}
+                <br>
+              </h6>
+              <h6 class="format-font">
+                Experiência: {{pokemon.experiencia}}xp
+              </h6>
+          </div>
+          <div  class="d-flex col-sm-4">  
+            <!-- <img style="float: left;" *ngIf="pokemon.urlFoto" src="{{pokemon.urlFoto}}" alt="{{pokemon.nome}}"> -->
+            <ngb-carousel *ngIf="pokemon.imagens" class="d-flex justify-content-end" 
+              [showNavigationArrows]="showNavigationArrows"
+              [showNavigationIndicators]="showNavigationIndicators">
+                <ng-template ngbSlide *ngFor="let  img of pokemon.imagens">
+                  <img [src]="img.url" alt="{{pokemon.nome}}">
+                </ng-template>
+            </ngb-carousel>
+            <mat-progress-spinner *ngIf="!pokemon.urlFoto" mode="indeterminate"></mat-progress-spinner>
+          </div>
+          
         </mat-card-content>
+        
       </mat-card>
     </div>
   </div>
+  
 
   <ngb-pagination
     class="d-flex justify-content-center"

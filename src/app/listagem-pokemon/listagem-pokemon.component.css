@@ -4,6 +4,7 @@
 
 .card-pokemon{
   position: relative;
+  min-width: 300px;
   max-width: 100%;
   margin: 6px;
   background-color: lightgray;
@@ -13,5 +14,18 @@
 .row {
   margin-top: 8%;
 }
-
+.format-font{
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 10pt;
+  margin-left: 0.2px;
+  margin-top: 0.1px;
+  font-weight: bold;
+}
+.format-title{
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 14pt;
+  margin-left: 0.2px;
+  margin-top: 0.1px;
+  font-weight: bold;
+}
 

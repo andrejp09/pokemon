@@ -4,11 +4,11 @@ import {MatCardModule} from '@angular/material/card';
 import {AppComponent} from './app.component';
 import {ListagemPokemonComponent} from './listagem-pokemon/listagem-pokemon.component';
 import {ListagemPokemonService} from './services/listagem-pokemon.service';
-import {NgbPaginationModule} from '@ng-bootstrap/ng-bootstrap';
+import {NgbPaginationModule,NgbCarouselModule} from '@ng-bootstrap/ng-bootstrap';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
-
+import {MatDividerModule} from '@angular/material/divider'
 @NgModule({
     declarations: [
         AppComponent,
@@ -16,8 +16,10 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
     ],
     imports: [
         NgbPaginationModule,
+        NgbCarouselModule,
         MatCardModule,
         MatToolbarModule,
+        MatDividerModule,
         MatProgressSpinnerModule,
         BrowserAnimationsModule,
         BrowserModule

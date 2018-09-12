@@ -1,6 +1,9 @@
 # Desafio pokemon
+Requisitos necessários para uso do projeto:
+- Node v8.12.0 ou superior
+- Angular cli, se necessário instalar usando npm install -g @angular/cli
 
-Para rodar o projeto apenas baixe o projeto e rode o npm install
+Passos para rodar o projeto, faça o download e execute o comando npm install
 
 Para visualizar online basta acessar a url:
 ## http://desafio-pokemon.herokuapp.com
